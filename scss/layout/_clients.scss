@@ -1,0 +1,31 @@
+
+.client-list{
+    display: flex;
+  }
+  
+  .client-list__item + .client-list__item{
+    margin-left: 30px;
+  }
+  
+  .client-list__link{
+    @include list-wrap();
+
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #AFB1B8;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
+
+    &:focus,
+    &:hover{
+        color: $button-color;
+        border-color: $button-color;
+    }
+  }
+
+  .client-list__icon{
+    fill: currentColor;
+  }

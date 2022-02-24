@@ -1,0 +1,21 @@
+
+.footer {
+    background-color: #2f303a;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .footer__container{
+    display: flex;
+    align-items: baseline;
+  }
+  
+  
+  .footer__text{
+    @include font ($fw:700, $ls:0.03em);
+    text-transform: uppercase;
+    color: $title-color;
+    margin-bottom: 20px;
+  }
+
+ 
