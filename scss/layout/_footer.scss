@@ -6,8 +6,11 @@
   }
   
   .footer__container{
+
+
+    @include tab{
     display: flex;
-    align-items: baseline;
+    align-items: baseline;};
   }
   
   

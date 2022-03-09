@@ -11,9 +11,26 @@
     letter-spacing: $ls;
 }
 
-@mixin transition ($property) {
-    transition-property: $color;
+@mixin transition ($property:color) {
+    transition-property: color;
     transition-duration: 250ms ;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
+@mixin tel{
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
+@mixin tab{
+    @media screen and (min-width:768px){
+        @content;
+    }
+}
+
+@mixin desk{
+    @media screen and (min-width:1200px){
+        @content;
+    }
+}

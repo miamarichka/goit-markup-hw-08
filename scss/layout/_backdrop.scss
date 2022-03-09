@@ -30,6 +30,8 @@
   top: 50%;
   left: 50%;
   
+
+  @include desk{
   width: 528px;
   height: 581px;
   opacity: 1;
@@ -40,7 +42,8 @@
   
   @include transition(transform opacity background-color);
 
-  }
+  };
+}
   
   .modal__icon{
     fill: currentColor;

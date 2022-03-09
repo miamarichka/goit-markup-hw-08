@@ -1,6 +1,8 @@
 
 .client-list{
-    display: flex;
+
+  @include tab{
+    display: flex;};
   }
   
   .client-list__item + .client-list__item{

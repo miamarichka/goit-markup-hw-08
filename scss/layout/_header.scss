@@ -1,5 +1,9 @@
 .container__header{
-    @include list-wrap($jc:space-between);
+
+
+    @include desk{
+    @include list-wrap($jc:space-between);};
+    
 }
 
 .header{

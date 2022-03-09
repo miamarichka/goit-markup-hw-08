@@ -1,3 +1,11 @@
+
+.hidden{
+@include tel{
+  display: none;
+ };
+}
+
+
 .section--nopadding{
     padding-top: 0;
   }

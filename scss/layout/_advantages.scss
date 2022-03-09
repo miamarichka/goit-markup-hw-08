@@ -3,7 +3,8 @@
 }
 
 .advantage-list {
-    display: flex;
+  @include desk{
+    display: flex;};
   }
   
   .advantage-list__item:not(:last-child) {

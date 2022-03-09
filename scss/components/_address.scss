@@ -42,7 +42,9 @@
   }
 
   .address-wrap{
+
+    @include tab{
     margin-right: 70px;
-    flex-grow: 1;
+    flex-grow: 1;};
   }
 
