@@ -1,3 +1,42 @@
+.mobile-menu{
+  @include tab{
+    display: none;
+  };
+
+  background-color: transparent;
+  padding: 12px 8px;
+  width: 40px;
+  height: 40px;
+  border: none;
+
+  & .mobile-menu__icon--close{
+    display: none;
+  };
+
+  &.is-open .mobile-menu__icon--close{
+    display: block;
+  };
+
+  &.is-open .mobile-menu__icon--open{
+  display: none;
+};
+}
+
+.site-nav{
+  @media screen and (max-width:767px){
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.mobile-menu-wrap{
+  @include tel{
+    width: 100%;
+    height: auto;
+    
+  }
+}
+
 .site-nav, 
 .nav-list,
 .contacts-list {

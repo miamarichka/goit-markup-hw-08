@@ -19,7 +19,13 @@ section--grey-background {
     margin-right: 30px;};
   }
   }
- 
+ .team-list__img{
+   @include tel{
+     max-width: 100%;
+     height: auto;
+   }
+ }
+
   .team-list__title {
     color: $main-text-color;
     @include font ($fw:500, $fs:16px, $lh: calc(19 / 16), $ls:0.03em );
