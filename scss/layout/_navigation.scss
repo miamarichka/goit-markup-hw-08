@@ -9,15 +9,15 @@
   height: 40px;
   border: none;
 
-  & .mobile-menu__icon--close{
-    display: none;
-  };
-
-  &.is-open .mobile-menu__icon--close{
+  &.is-open .mobile-menu__icon--open{
     display: block;
   };
 
-  &.is-open .mobile-menu__icon--open{
+  &.is-open .mobile-menu__icon--close{
+  display: none;
+};
+
+& .mobile-menu__icon--open{
   display: none;
 };
 }
