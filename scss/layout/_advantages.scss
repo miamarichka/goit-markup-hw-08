@@ -3,13 +3,29 @@
 }
 
 .advantage-list {
+  padding: inherit;
+  margin: auto;
+  width: 100%;
+
   @include desk{
-    display: flex;};
+    display: flex;
+    padding: 0
+  };
+}
+  
+  .advantage-list__item{
+  @include tel{
+    &:not(:last-child){
+      margin-bottom: 30px;
+    }
   }
   
-  .advantage-list__item:not(:last-child) {
+  @include tab{
+  &:not(:last-child) {
     margin-right: 30px;
-  }
+  };
+ }
+}
   
   .advantage-list__title {
     color: $main-text-color;
@@ -28,7 +44,9 @@
     background-color: #F5F4FA;
     border-radius: 4px;
     height: 120px;
+    @include tab{
     width: 270px;
+  };
 
     @include list-wrap();
     margin-bottom: 30px;

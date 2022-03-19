@@ -1,4 +1,4 @@
-/*.subscribe-form{
+.subscribe-form{
 
   @include tab{
     @include list-wrap($ai:flex-end);};
@@ -15,7 +15,8 @@
 
     @include tab{
     width: 358px;
-    height: 50px;};
+    height: 50px;
+  };
     
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -39,6 +40,12 @@
 }
     
     .subscribe-form__wrap{
+      @include tel{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding: inherit;
+      }
 
       @include tab{
       margin-right: 12px;
@@ -50,6 +57,6 @@
       @include tab{
         margin-left: 10px;};
       }
-      */
+      
 
       

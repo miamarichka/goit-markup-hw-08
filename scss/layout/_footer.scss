@@ -6,7 +6,7 @@
   }
   
   .footer__container{
-
+   text-align: center;
 
     @include tab{
     display: flex;
@@ -21,4 +21,17 @@
     margin-bottom: 20px;
   }
 
+.address-list,
+.socials-wrap{
+  @include tel{
+    margin-bottom: 60px;
+    padding: inherit;
+  }
+}
+
+  .address-list__item:not(:last-child) {
+    @include tel{
+      margin-bottom: 8px;
+    };
+  }
  

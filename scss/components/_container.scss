@@ -1,5 +1,9 @@
 .container {
- width: 480px;
+ margin: auto;
+ width: 100vw;
+ max-width: 480px;
+ padding-left: 15px;
+ padding-right: 15px;
 
 @include tab{
   width: 768px;

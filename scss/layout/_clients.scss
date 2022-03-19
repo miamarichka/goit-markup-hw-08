@@ -1,32 +1,49 @@
 
 .client-list{
+  margin: auto;
+  display: flex;
+  padding: inherit;
+    @include tel{
+	    flex-wrap: wrap;
+    }
+}
 
-  @include tab{
-    display: flex;};
-  }
   
-  .client-list__item + .client-list__item{
+  .client-list__item{
+   &:nth-child(n){
+     margin-right: 30px;
+   };
+   &:nth-child(-n+4){
+     margin-bottom: 30px;
+   };
+
+    & + .client-list__item{
+    @include tab{
     margin-left: 30px;
-  }
+  };
+};
+
+}
   
   .client-list__link{
     @include list-wrap();
 
     width: 170px;
     height: 92px;
+  
     border: 1px solid #AFB1B8;
     box-sizing: border-box;
     border-radius: 4px;
     color: #AFB1B8;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  border-color 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    border-color 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
 
     &:focus,
     &:hover{
         color: $button-color;
         border-color: $button-color;
-    }
-  }
+  };
+}
 
   .client-list__icon{
     fill: currentColor;

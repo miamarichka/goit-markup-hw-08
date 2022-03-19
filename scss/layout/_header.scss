@@ -6,6 +6,15 @@
     
 }
 
+.header__mobile{
+    @include tel{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    };
+}
+
 .header{
     background-color: $background-color;
     border-bottom: 1px solid #ececec;

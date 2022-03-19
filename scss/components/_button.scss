@@ -17,6 +17,11 @@ letter-spacing: 0.06em;
 &:hover,
 &:focus{
 transform: scale(1.05);
+ };
 }
 
+.subscribe-form__button{
+    @include tel{
+        margin: auto;
+    }
 }

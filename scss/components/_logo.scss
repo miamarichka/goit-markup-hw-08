@@ -1,11 +1,18 @@
 .logo {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  font-family: $secondary-font;
+  color: $button-color;
+  font-weight: 700;
+
+  @include tab{
     display: block;
-    font-family: $secondary-font;
-    font-weight: bold;
     font-size: 26px;
     line-height: calc(31 / 26);
-    letter-spacing: 0.03em;
-    color: $button-color;
+  };
+    
+    
   }
 
   .logo--black {
@@ -23,5 +30,6 @@
   }
 
   .footer__logo {
+    display: block;
     margin-bottom: 20px;
   }
