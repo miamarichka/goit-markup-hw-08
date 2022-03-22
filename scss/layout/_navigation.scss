@@ -32,12 +32,7 @@
     fill: $button-color;
   };
 }
-.site-nav{
-  @include tab{
-    display: flex;
-    align-items: baseline;
-  };
-}
+
 
 .mobile-menu-wrap{
   @include tab{
@@ -126,10 +121,17 @@ color: $button-color;
 }
 
 
+.site-nav{
+  @include tab{
+    display: flex;
+    align-items: baseline;
+  };
+}
+
 .site-nav, 
 .nav-list,
 .contacts-list {
-  @include tab{
+  @include desk{
   display: flex;};
 }
 
@@ -171,9 +173,6 @@ color: $button-color;
   }
 
 .nav-list__link {
-
-
-  
   @include tab{
   position: relative;
   padding-bottom: 32px;
@@ -193,24 +192,33 @@ color: $button-color;
 
 
 .contacts-list{
+
   @include font();
   }
 
   
   .contacts-list__item + .contacts-list__item{
-
-    @include tab{
-    margin-left: 50px;};
-  }
+    @include desk{
+    margin-left: 50px;
+  };
+}
   
   .contacts-list__link {
-
-
     @include tab{
-    padding-bottom: 32px;
-    padding-top: 32px;
+      display: block;
+      &:not(:last-child){
+        margin-bottom: 10px;
+      };
+    &.contacts-list__link--email{
+      padding-top: 21px;
+    };
+    &.contacts-list__link--phone{
+      padding-bottom: 21px;
+    };
+      
+    }; 
 
-    @include list-wrap($jc:null);
+    
     color: $additional-text-color;
     text-decoration: none;
     
@@ -219,9 +227,13 @@ color: $button-color;
     &:hover,
     &:focus{
         color: $button-color;};
-      }; 
-    
-  }
+
+    @include desk{
+    @include list-wrap($jc:null);
+    padding-bottom: 32px;
+    padding-top: 32px;
+    };
+  } 
 
   
   .contacts-list__icon{

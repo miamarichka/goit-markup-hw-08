@@ -1,6 +1,8 @@
 .subscribe-form{
-
-  @include tab{
+@include tab{
+  margin: 0 152px 60px 166px;
+}
+  @include desk{
     @include list-wrap($ai:flex-end);};
     }
     
@@ -16,6 +18,7 @@
     @include tab{
     width: 358px;
     height: 50px;
+    margin-bottom: 20px;
   };
     
     background-color: transparent;
@@ -45,9 +48,13 @@
         flex-direction: column;
         margin-bottom: 20px;
         padding: inherit;
-      }
+      };
 
       @include tab{
+        max-width: 450px;
+      };
+
+      @include desk{
       margin-right: 12px;
       max-width: 358px;};
     }

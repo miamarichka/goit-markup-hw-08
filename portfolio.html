@@ -27,15 +27,69 @@
     <header class="header">
       <div class="container container__header">
         <nav class="site-nav">
+          <div class="header__mobile">
           <a href="/" class="logo header__logo "
             >Web<span class="logo--black">Studio</span></a
           >
+          <button type="button" class="mobile-menu__button is-open" data-menu-button aria-expanded="false">
+            <svg class="mobile-menu__icon" width="19" height="19"
+            aria-label="переключатель мобильного меню">
+              <use class="mobile-menu__icon--open" href="images/symbol-defs-orig.svg#menu-mobile"></use>
+              <use class="mobile-menu__icon--close" href="images/symbol-defs-orig.svg#close-mobile"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-menu-wrap is-open">
+          <div class="mobile-menu-wrap__nav">
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-list__item ">
+              <a href="index.html" class="mobile-menu-list__link ">Студия</a>
+            </li>
+            <li class="mobile-menu-list__item">
+              <a href="portfolio.html" class="mobile-menu-list__link mobile-menu-list__link--current">Портфолио</a>
+            </li>
+            <li class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link">Контакты</a>
+            </li>
+          </ul>
+          </div>
+          <div class="mobile-menu-wrap__contacts">
+            <ul class="mobile-menu-contact-list">
+          
+          <li class="mobile-menu-contact-list__item">
+            <a href="tel:+380961111111" class="mobile-menu-contact-list__link  mobile-menu-contact-list__link--phone">
+              <svg class="mobile-menu-contact-list__icon" width="10" height="16"> <use href="images/symbol-defs-orig.svg#smartphone"></use></svg>
+              +38 096 111 11 11</a>
+          </li>
+          <li class="mobile-menu-contact-list__item">
+            <a href="mailto:info@devstudio.com" class="mobile-menu-contact-list__link mobile-menu-contact-list__link">
+              <svg class="mobile-menu-contact-list__icon" width="16" height="12"> <use href="images/symbol-defs-orig.svg#envelope"></use></svg>
+              info@devstudio.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mobile-menu-wrap__social">
+        <ul class="mobile-menu-social-list">
+          <li class="mobile-menu-social-list__item"><a href="" class="mobile-menu-social-list__link">Instagram
+          </a></li>
+          <li class="mobile-menu-social-list__item"><a href="" class="mobile-menu-social-list__link">Twitter
+          </a></li>
+          <li class="mobile-menu-social-list__item"><a href="" class="mobile-menu-social-list__link">Facebook
+          </a></li>
+          <li class="mobile-menu-social-list__item"><a href="" class="mobile-menu-social-list__link">LinkedIn
+          </a></li>
+
+        </ul>
+      </div>
+        </div>
+          
           <ul class="nav-list">
             <li class="nav-list__item ">
-              <a href="index.html" class="nav-list__link ">Студия</a>
+              <a href="index.html" class="nav-list__link nav-list__link--current">Студия</a>
             </li>
             <li class="nav-list__item">
-              <a href="" class="nav-list__link nav-list__link--current">Портфолио</a>
+              <a href="portfolio.html" class="nav-list__link">Портфолио</a>
             </li>
             <li class="nav-list__item">
               <a href="" class="nav-list__link">Контакты</a>
@@ -55,7 +109,13 @@
               +38 096 111 11 11</a>
           </li>
         </ul>
+       
+        
+
+       </div>
       </div>
+
+      
     </header>
 
     <main class="projects">
@@ -251,6 +311,7 @@
     <footer class="footer">
       <div class="container footer__container">
 
+        <div class="footer-tablet">
         <div class="address-wrap">
         <a href="/" class="logo footer__logo"
           >Web<span class="logo--white">Studio</span></a>
@@ -300,8 +361,9 @@
           </li>
         </ul>
       </div>
+    </div>
 
-      <!--subscibe-form-------------------------------------------------->
+      <!--subscibe-form------------------------------------------------->
       <form class="subscribe-form">
         <div class="subscribe-form__wrap">
         <label class="footer__text" for="email">Подпишитесь на рассылку</label>

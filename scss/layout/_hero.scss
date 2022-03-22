@@ -1,7 +1,7 @@
 .hero {
 @include tel{
   height: 400px;
-}
+};
 
   text-align: center;
   background-color: $additional-background-color;
@@ -14,15 +14,18 @@
   margin-right: auto;
 
   max-width: 1600px;
-  width: 100%;
+  width: 100vw;
   background-position: center;
-  padding: 118px 60px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  
   
 
   @include desk{
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;
+    padding: 118px 60px;
     };
   } 
 

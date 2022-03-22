@@ -1,7 +1,7 @@
 .container__header{
 
 
-    @include desk{
+    @include tab{
     @include list-wrap($jc:space-between);};
     
 }

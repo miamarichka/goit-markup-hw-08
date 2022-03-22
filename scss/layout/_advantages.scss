@@ -7,8 +7,9 @@
   margin: auto;
   width: 100%;
 
-  @include desk{
+  @include tab{
     display: flex;
+    flex-wrap: wrap;
     padding: 0
   };
 }
@@ -17,14 +18,21 @@
   @include tel{
     &:not(:last-child){
       margin-bottom: 30px;
-    }
-  }
+    };
+  };
   
   @include tab{
+  &:nth-child(2n+1){
+  margin-right: 30px;
+  };
+  max-width: 354px;
+};
+
+  @include desk{
   &:not(:last-child) {
     margin-right: 30px;
   };
- }
+ };
 }
   
   .advantage-list__title {
@@ -45,6 +53,9 @@
     border-radius: 4px;
     height: 120px;
     @include tab{
+      max-width: 100%;
+    };
+    @include desk{
     width: 270px;
   };
 

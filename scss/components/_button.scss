@@ -21,7 +21,5 @@ transform: scale(1.05);
 }
 
 .subscribe-form__button{
-    @include tel{
-        margin: auto;
-    }
+margin: auto;
 }
