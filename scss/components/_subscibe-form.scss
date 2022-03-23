@@ -1,9 +1,11 @@
 .subscribe-form{
-@include tab{
+@media screen and (min-width:768px) and (max-width:1199px){
   margin: 0 152px 60px 166px;
-}
+};
+
   @include desk{
-    @include list-wrap($ai:flex-end);};
+    @include list-wrap($ai:flex-end);
+     };
     }
     
     .subscribe-form__input-email{
@@ -15,12 +17,14 @@
     color: rgba(255, 255, 255, 0.6);
     
 
+    @media screen and (min-width:768px) and (max-width:1199px){
+    margin-bottom: 20px;
+  };
     @include tab{
     width: 358px;
     height: 50px;
-    margin-bottom: 20px;
-  };
-    
+    };
+
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;

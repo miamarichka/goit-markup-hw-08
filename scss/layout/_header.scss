@@ -1,8 +1,8 @@
 .container__header{
 
-
     @include tab{
-    @include list-wrap($jc:space-between);};
+    @include list-wrap($jc:space-between);
+};
     
 }
 

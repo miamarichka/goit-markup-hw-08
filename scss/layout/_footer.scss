@@ -10,15 +10,19 @@
 
     @include desk{
     display: flex;
-    align-items: baseline;};
+    align-items: baseline;
+   };
   }
 
   .footer-tablet{
+    @media screen and (min-width:768px) and (max-width:1199px){
+      margin-bottom: 60px;
+    };
     @include tab{
       display: flex;
-      margin-bottom: 60px;
-    }
+    };
   }
+
   
   
   .footer__text{

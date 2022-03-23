@@ -19,7 +19,7 @@
 
   &.is-open .mobile-menu__icon--close{
   display: none;
-};
+  };
 
 & .mobile-menu__icon--open{
   display: none;
@@ -132,7 +132,9 @@ color: $button-color;
 .nav-list,
 .contacts-list {
   @include desk{
-  display: flex;};
+  display: flex;
+  align-items: baseline;
+ };
 }
 
 .nav-list,
@@ -166,7 +168,7 @@ color: $button-color;
       background-color: #2196F3;
       position: absolute;
       left: 0;
-      bottom: -1.5px;
+      bottom: 1.3px;
     };
   };
 
@@ -192,6 +194,10 @@ color: $button-color;
 
 
 .contacts-list{
+  @include desk{
+    display: flex;
+    align-items: center;
+  }
 
   @include font();
   }
@@ -209,15 +215,22 @@ color: $button-color;
       &:not(:last-child){
         margin-bottom: 10px;
       };
-    &.contacts-list__link--email{
+    };
+
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+     &.contacts-list__link--email{
       padding-top: 21px;
     };
     &.contacts-list__link--phone{
       padding-bottom: 21px;
     };
-      
-    }; 
+  };
 
+    @include desk{
+    padding-bottom: 32px;
+    padding-top: 32px;
+    @include list-wrap($jc:null);
+    };
     
     color: $additional-text-color;
     text-decoration: none;
@@ -226,13 +239,9 @@ color: $button-color;
 
     &:hover,
     &:focus{
-        color: $button-color;};
+        color: $button-color;
+      };
 
-    @include desk{
-    @include list-wrap($jc:null);
-    padding-bottom: 32px;
-    padding-top: 32px;
-    };
   } 
 
   

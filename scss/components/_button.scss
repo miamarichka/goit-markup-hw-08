@@ -21,5 +21,7 @@ transform: scale(1.05);
 }
 
 .subscribe-form__button{
+    @media screen and (max-width:1199px){
 margin: auto;
+ };
 }

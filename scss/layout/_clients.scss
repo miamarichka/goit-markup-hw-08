@@ -2,7 +2,6 @@
 .client-list{
   margin: auto;
   display: flex;
-  padding: inherit;
     @include tel{
 	    flex-wrap: wrap;
     }
@@ -16,7 +15,7 @@
   
   .client-list__item{
 @include tel{
-   &:nth-child(n){
+   &:nth-child(2n+1){
      margin-right: 30px;
    };
    &:nth-child(-n+4){
@@ -24,7 +23,7 @@
    };
   };
 
-    @include tab{
+  @media screen and (min-width: 768px) and (max-width:1199px){
     &:nth-child(2){
       margin-right: 30px;
       margin-left: 30px;
@@ -45,13 +44,19 @@
   }
   
   .client-list__link{
+     @include tel{
+     width: 210px;
+    };
+
     @include tab{
       width: 226px;
     };
 
     @include list-wrap();
-
+    @include desk{
     width: 170px;
+    flex-wrap: nowrap;
+    };
     height: 92px;
   
     border: 1px solid #AFB1B8;

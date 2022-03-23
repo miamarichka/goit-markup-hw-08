@@ -48,7 +48,9 @@
   fill: $title-color;
 }
 .socials-wrap{
-
+@include desk{
+  margin-top: 10px;
+};
 
   @include tab{
   margin-right: 93px;};
