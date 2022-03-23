@@ -1,5 +1,8 @@
 .container__header{
-
+    @include tel{
+        position: relative;
+    };
+    
     @include tab{
     @include list-wrap($jc:space-between);
 };

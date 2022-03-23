@@ -9,21 +9,21 @@
   height: 40px;
   border: none;
 
-  &.is-open .mobile-menu__icon--open{
+  &.is-open .menu-container{
     display: block;
   };
 
-  &.is-open .mobile-menu-wrap{
-    display: block;
-  };
 
-  &.is-open .mobile-menu__icon--close{
-  display: none;
-  };
-
-& .mobile-menu__icon--open{
+  & .mobile-menu__icon--close{
   display: none;
  };
+ &.is-open .mobile-menu__icon--close{
+   display: block;
+ };
+ &.is-open .mobile-menu__icon--open{
+   display: none;
+ };
+
 }
 
 .mobile-menu__icon{
@@ -34,11 +34,12 @@
 }
 
 
-.mobile-menu-wrap{
+.menu-container{
   @include tab{
     display: none
   };
 
+  display: none;
   opacity: 0;
   pointer-events: none;
   visibility:hidden;
@@ -50,6 +51,11 @@
     left: 0;
     background-color: $background-color;
     
+    &.is-open{
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    };
   }
 
 .mobile-menu-wrap__nav{
