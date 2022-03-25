@@ -947,12 +947,14 @@ img {
   z-index: 2;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.215, 0.61, 0.355, 1), visibility 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  overflow: hidden;
   padding: 48px 40px;
   width: 100vw;
   height: 100vh;
   position: absolute;
   left: 0;
   background-color: #ffffff;
+  margin: 0;
 }
 
 .menu-container.is-open {
@@ -988,6 +990,10 @@ img {
 }
 
 .mobile-menu-list__link:hover {
+  color: #2196f3;
+}
+
+.mobile-menu-list__link.mobile-menu-list__link--current {
   color: #2196f3;
 }
 

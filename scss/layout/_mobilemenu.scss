@@ -40,6 +40,7 @@
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.215, 0.610, 0.355, 1),
     visibility 250ms cubic-bezier(0.215, 0.610, 0.355, 1);
+    overflow: hidden;
   
       padding: 48px 40px;
       width: 100vw;
@@ -47,6 +48,7 @@
       position: absolute;
       left: 0;
       background-color: $background-color;
+      margin: 0;
       
       &.is-open{
         opacity: 0;
@@ -76,10 +78,15 @@
   &:focus{
     color: $button-color;
   };
-  &:hover{color: $button-color;
+  &:hover{
+    color: $button-color;
   };
+  &.mobile-menu-list__link--current{
+    color: $button-color;
   }
-  
+  }
+
+
   .menu-container__contacts{
     margin-bottom: 64px;
   }
