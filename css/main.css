@@ -1497,6 +1497,13 @@ img {
   display: flex;
 }
 
+@media screen and (max-width: 479px) {
+  .client-list {
+    display: block;
+    padding: inherit;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .client-list {
     flex-wrap: wrap;
@@ -1511,7 +1518,13 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .client-list__item {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (mix-width: 480px) {
   .client-list__item:nth-child(2n+1) {
     margin-right: 30px;
   }
@@ -1658,13 +1671,15 @@ img {
 }
 
 .modal {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  max-height: 609px;
   padding: 40px;
   background-color: #ffffff;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
   opacity: 1;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1674,11 +1689,6 @@ img {
 
 @media screen and (max-width: 767px) {
   .modal {
-    max-width: 450px;
-    width: 100%;
-    height: auto;
-    max-height: 609px;
-    left: 50%;
     top: 10%;
     transform: translate(-50%, -5%) skewX(0deg) scale(1);
   }
@@ -1686,12 +1696,14 @@ img {
 
 @media screen and (min-width: 768px) {
   .modal {
-    max-width: 450px;
-    width: 100%;
-    height: auto;
-    max-height: 609px;
-    left: 50%;
     top: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
   }
 }
 
