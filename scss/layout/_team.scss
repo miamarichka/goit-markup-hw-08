@@ -44,10 +44,11 @@
 }
 
  .team-list__img{
-   @include tel{
-     max-width: 100%;
-     height: auto;
-   }
+  height: auto;
+  width: 100%;
+   @include desk{
+     max-width: 270px;
+   };
  }
 
   .team-list__title {
