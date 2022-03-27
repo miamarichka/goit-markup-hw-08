@@ -1864,6 +1864,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .projects-list__item {
+    max-width: 370px;
+    width: 100%;
     margin-right: 30px;
     margin-bottom: 30px;
   }
@@ -1882,8 +1884,10 @@ img {
   }
 }
 
-.projects-list__link {
-  width: 370px;
+@media screen and (min-width: 1200px) {
+  .projects-list__img {
+    width: 100%;
+  }
 }
 
 .projects-list__link:hover,
