@@ -40,7 +40,7 @@
   flex-direction: column;
   justify-content: space-between;
     background: rgba(0, 0, 0, 0.2);
-    z-index: 4;
+    z-index: 2;
     opacity: 0;
     pointer-events: none;
     visibility:hidden;
@@ -61,6 +61,7 @@
         opacity: 1;
         visibility: visible;
         overflow: hidden;
+        pointer-events: all;
       };
       
       @include tab{
