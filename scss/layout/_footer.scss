@@ -20,11 +20,15 @@
     };
     @include tab{
       display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    };
+    @include desk{
+      margin-right: 90px;
+      justify-content: space-between;
     };
   }
 
-  
-  
   .footer__text{
     @include font ($fw:700, $ls:0.03em);
     text-transform: uppercase;

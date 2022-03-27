@@ -1,6 +1,4 @@
 
-
-
 .site-nav{
   @include tab{
     display: flex;
@@ -48,7 +46,7 @@
       background-color: #2196F3;
       position: absolute;
       left: 0;
-      bottom: 1.3px;
+      bottom: -1px;
     };
   };
 
@@ -100,6 +98,7 @@
     @media screen and (min-width: 768px) and (max-width: 1199px){
      &.contacts-list__link--email{
       padding-top: 21px;
+      margin-bottom: 10px;
     };
     &.contacts-list__link--phone{
       padding-bottom: 21px;

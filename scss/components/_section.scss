@@ -1,5 +1,10 @@
 
 .section__title {
+  @media screen and (max-width:1199px){
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 33px;
+  };
     color: $main-text-color;
     font-weight: 700;
     font-size: 36px;
@@ -10,10 +15,10 @@
   }
 
   .section {
-padding-top: 60px;
-padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    @include tab{
+    @include desk{
     padding-top: 94px;
     padding-bottom: 94px;};
   }

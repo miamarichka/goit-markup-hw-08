@@ -37,10 +37,14 @@
 }
   
   .advantage-list__title {
+    @include tel{
+      text-align: center;
+    };
     color: $main-text-color;
     @include font($fw:700, $ls:0.03em );
     text-transform: uppercase;
     margin-bottom: 10px;
+    
   }
   
   .advantage-list__text {

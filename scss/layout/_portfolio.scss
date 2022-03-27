@@ -30,7 +30,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
+      margin-bottom: 40px;
     };
+    @include tab{
+      margin-bottom: 30px;
+    }
     @include list-wrap($ai:null);
     margin-bottom: 50px;
   }
@@ -65,8 +69,13 @@
     border: 1px solid #eeeeee;
   }
   
-  .projects-list__item {
-  @include tab{
+.projects-list__item {
+@include tel{
+  &:not(:last-child){
+  margin-bottom: 30px;
+       };
+    };
+@include tab{
   max-width: 354px;
   height: auto;
   &:nth-child(2n+1){
@@ -77,7 +86,6 @@
   };
 };
 @include desk{
-    width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
 
@@ -96,8 +104,9 @@
     flex-wrap: wrap;
   };
 }
-  
- 
+.projects-list__link{
+  width: 370px;
+}
   
   .projects-list__link:hover,
   .projects-list__link:focus{

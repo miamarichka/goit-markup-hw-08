@@ -42,9 +42,8 @@
   }
 
   .address-wrap{
-    @include tab{
-    margin-right: 70px;
-    flex-grow: 1;
+   @include desk{
+     margin-right: 70px;
    };
   }
 

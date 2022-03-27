@@ -419,9 +419,14 @@ img {
 }
 
 .header__logo {
-  margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 93px;
+  }
 }
 
 .logo--white {
@@ -522,12 +527,6 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .socials-wrap {
-    margin-right: 93px;
-  }
-}
-
 .section__title {
   color: #212121;
   font-weight: 700;
@@ -538,12 +537,20 @@ img {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1199px) {
+  .section__title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -584,10 +591,9 @@ img {
   font-style: normal;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .address-wrap {
     margin-right: 70px;
-    flex-grow: 1;
   }
 }
 
@@ -914,6 +920,7 @@ img {
   width: 40px;
   height: 40px;
   border: none;
+  z-index: 5;
 }
 
 @media screen and (min-width: 768px) {
@@ -943,34 +950,35 @@ img {
 }
 
 .menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: rgba(0, 0, 0, 0.2);
-  z-index: 2;
-  opacity: 1;
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
   transition: opacity 250ms cubic-bezier(0.215, 0.61, 0.355, 1), visibility 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  overflow: hidden;
   padding: 48px 40px;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: fixed;
   left: 0;
+  top: 0;
   background-color: #ffffff;
   margin: 0;
 }
 
 .menu-container.is-open {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
   .menu-container {
     display: none;
   }
-}
-
-.menu-container__nav {
-  margin-bottom: 306px;
 }
 
 .mobile-menu-list__item:not(:last-child) {
@@ -1103,7 +1111,7 @@ img {
     background-color: #2196F3;
     position: absolute;
     left: 0;
-    bottom: 1.3px;
+    bottom: -1px;
   }
 }
 
@@ -1166,6 +1174,7 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts-list__link.contacts-list__link--email {
     padding-top: 21px;
+    margin-bottom: 10px;
   }
   .contacts-list__link.contacts-list__link--phone {
     padding-bottom: 21px;
@@ -1267,10 +1276,8 @@ img {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
-    color: #ffffff;
-    font-weight: 900;
     font-size: 44px;
     line-height: calc(60 / 44);
   }
@@ -1327,6 +1334,12 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .advantage-list__title {
+    text-align: center;
+  }
 }
 
 .advantage-list__text {
@@ -1412,10 +1425,6 @@ img {
 
 .section--grey-background {
   background-color: #f5f4fa;
-}
-
-.team-list {
-  padding: inherit;
 }
 
 @media screen and (min-width: 768px) {
@@ -1633,6 +1642,15 @@ img {
 @media screen and (min-width: 768px) {
   .footer-tablet {
     display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-tablet {
+    margin-right: 90px;
+    justify-content: space-between;
   }
 }
 
@@ -1784,6 +1802,13 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-filter-list {
+    margin-bottom: 30px;
   }
 }
 
@@ -1818,6 +1843,12 @@ img {
   border: 1px solid #eeeeee;
 }
 
+@media screen and (max-width: 767px) {
+  .projects-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .projects-list__item {
     max-width: 354px;
@@ -1833,7 +1864,6 @@ img {
 
 @media screen and (min-width: 1200px) {
   .projects-list__item {
-    width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
   }
@@ -1852,6 +1882,10 @@ img {
   }
 }
 
+.projects-list__link {
+  width: 370px;
+}
+
 .projects-list__link:hover,
 .projects-list__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1867,6 +1901,7 @@ img {
   letter-spacing: 0.03em;
   background-color: rgba(33, 150, 243, 0.9);
   width: 100%;
+  max-width: 370px;
   padding: 63px 24px;
   transform: translateY(100%);
   opacity: 0;

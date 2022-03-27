@@ -4,8 +4,6 @@
   }
   
   .team-list {
-    padding: inherit;
-
     @include tab{
     display: flex;
     flex-wrap: wrap;
