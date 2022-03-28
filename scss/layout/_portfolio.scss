@@ -34,9 +34,12 @@
     };
     @include tab{
       margin-bottom: 30px;
-    }
+    };
+    @include desk{
+      margin-bottom: 50px;
+    };
     @include list-wrap($ai:null);
-    margin-bottom: 50px;
+    
   }
   
   .btn-filter-list__item{
