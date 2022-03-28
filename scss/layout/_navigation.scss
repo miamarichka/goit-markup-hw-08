@@ -46,7 +46,7 @@
       background-color: #2196F3;
       position: absolute;
       left: 0;
-      bottom: -1px;
+      bottom: 0.5px;
     };
   };
 
@@ -97,13 +97,9 @@
 
     @media screen and (min-width: 768px) and (max-width: 1199px){
      &.contacts-list__link--email{
-      padding-top: 21px;
       margin-bottom: 10px;
-    };
-    &.contacts-list__link--phone{
-      padding-bottom: 21px;
-    };
   };
+}
 
     @include desk{
     padding-bottom: 32px;
