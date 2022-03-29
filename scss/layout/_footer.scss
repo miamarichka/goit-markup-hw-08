@@ -15,7 +15,7 @@
   }
 
   .footer-tablet{
-    @media screen and (min-width:768px) and (max-width:1199px){
+    @media screen and  (max-width:1199px){
       margin-bottom: 60px;
     };
     @include tab{
@@ -35,14 +35,6 @@
     color: $title-color;
     margin-bottom: 20px;
   }
-
-.address-list,
-.socials-wrap{
-  @include tel{
-    margin-bottom: 60px;
-    padding: inherit;
-  };
-}
 
   .address-list__item:not(:last-child) {
     @include tel{

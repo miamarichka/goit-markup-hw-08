@@ -586,6 +586,12 @@ img {
   font-style: normal;
 }
 
+@media screen and (max-width: 767px) {
+  .address-wrap {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .address-wrap {
     margin-right: 70px;
@@ -1631,7 +1637,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .footer-tablet {
     margin-bottom: 60px;
   }
@@ -1660,14 +1666,6 @@ img {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
-}
-
-@media screen and (max-width: 767px) {
-  .address-list,
-  .socials-wrap {
-    margin-bottom: 60px;
-    padding: inherit;
-  }
 }
 
 @media screen and (max-width: 767px) {

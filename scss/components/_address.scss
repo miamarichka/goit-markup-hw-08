@@ -42,6 +42,9 @@
   }
 
   .address-wrap{
+  @include tel{
+      margin-bottom: 60px;
+    };
    @include desk{
      margin-right: 70px;
    };
